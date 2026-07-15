@@ -30,6 +30,7 @@ import {
   getArtworkUploadError,
 } from "../utils/uploadLimits";
 import { useNavigate } from "react-router-dom";
+import bestArtMonthDummy from "../assets/best-art-month-dummy.png";
 
 const Motion = motion;
 
@@ -285,6 +286,7 @@ function KalaShaalaNGO() {
             >
               <div className="art-showcase-placeholder best-art-card" aria-label="Best Art of the Month">
                 <div className="best-art-visual" aria-hidden="true">
+                  <img src={bestArtMonthDummy} alt="" />
                   <span className="best-art-sun" />
                   <span className="best-art-arch" />
                   <span className="best-art-motif motif-one" />

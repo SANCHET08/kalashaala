@@ -379,9 +379,15 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
     background:
-      repeating-linear-gradient(90deg, rgba(185, 127, 63, 0.11) 0 1px, transparent 1px 52px),
-      repeating-linear-gradient(0deg, rgba(185, 127, 63, 0.11) 0 1px, transparent 1px 52px);
+      linear-gradient(180deg, transparent 0%, rgba(36, 21, 15, 0.04) 48%, rgba(36, 21, 15, 0.62) 100%),
+      repeating-linear-gradient(90deg, rgba(185, 127, 63, 0.08) 0 1px, transparent 1px 52px),
+      repeating-linear-gradient(0deg, rgba(185, 127, 63, 0.08) 0 1px, transparent 1px 52px);
+  }
+
+  .best-art-visual img {
+    @apply h-full w-full rounded-none object-cover;
   }
 
   .best-art-sun,
@@ -391,11 +397,11 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-sun {
-    @apply right-14 top-14 h-24 w-24 rounded-full bg-[#d94f1f]/85 shadow-[0_0_80px_rgba(217,79,31,0.35)];
+    @apply right-14 top-14 z-[2] h-24 w-24 rounded-full bg-[#d94f1f]/30 shadow-[0_0_80px_rgba(217,79,31,0.25)];
   }
 
   .best-art-arch {
-    @apply left-1/2 top-20 h-64 w-48 -translate-x-1/2 rounded-t-full border-[18px] border-[#20675c] bg-[#f7c76b]/60;
+    @apply left-1/2 top-20 z-[2] h-64 w-48 -translate-x-1/2 rounded-t-full border-[18px] border-white/40 bg-[#f7c76b]/10 opacity-35;
   }
 
   .best-art-arch::after {
@@ -408,7 +414,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-motif {
-    @apply h-28 w-28 rounded-full border-[10px] border-[#9c2d18]/90;
+    @apply z-[2] h-28 w-28 rounded-full border-[10px] border-white/70 opacity-60;
   }
 
   .best-art-motif::before,
@@ -416,7 +422,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
     content: "";
     position: absolute;
     border-radius: 999px;
-    background: #9c2d18;
+    background: rgba(255, 255, 255, 0.88);
   }
 
   .best-art-motif::before {
@@ -438,7 +444,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-motif.motif-two {
-    @apply bottom-20 right-20 scale-75 border-[#20675c]/90;
+    @apply bottom-20 right-20 scale-75 border-[#20675c]/70;
   }
 
   .best-art-motif.motif-two::before,
