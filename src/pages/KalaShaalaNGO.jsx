@@ -283,13 +283,25 @@ function KalaShaalaNGO() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="art-showcase"
             >
-              <div className="art-showcase-placeholder" aria-label="KalaShaala artwork preview">
-                <Palette size={54} />
-                <strong>KalaShaala Art Preview</strong>
-                <span>Authentic artist media can be uploaded here.</span>
+              <div className="art-showcase-placeholder best-art-card" aria-label="Best Art of the Month">
+                <div className="best-art-visual" aria-hidden="true">
+                  <span className="best-art-sun" />
+                  <span className="best-art-arch" />
+                  <span className="best-art-motif motif-one" />
+                  <span className="best-art-motif motif-two" />
+                </div>
+                <div className="best-art-copy">
+                  <span>Best Art of the Month</span>
+                  <strong>Monsoon Courtyard</strong>
+                  <p>Blue pottery inspired decor piece by a Jaipur artisan, selected for its calm interior palette and hand-painted floral detailing.</p>
+                  <div>
+                    <small>Rajasthan / Blue Pottery</small>
+                    <small>Featured July 2026</small>
+                  </div>
+                </div>
               </div>
-              <div className="floating-badge top-6 left-4"><Palette size={18} /> Live Art</div>
-              <div className="floating-badge bottom-6 right-4"><HeartHandshake size={18} /> Sponsor ready</div>
+              <div className="floating-badge top-6 left-4"><Palette size={18} /> Monthly Pick</div>
+              <div className="floating-badge bottom-6 right-4"><HeartHandshake size={18} /> Buyer ready</div>
             </Motion.div>
           </div>
         </section>

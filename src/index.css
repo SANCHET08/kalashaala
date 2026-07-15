@@ -363,6 +363,113 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
     @apply h-[470px] gap-2 p-8;
   }
 
+  .best-art-card {
+    @apply relative isolate flex h-[470px] items-stretch justify-stretch overflow-hidden p-5 text-left;
+    background:
+      radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.86), transparent 18rem),
+      radial-gradient(circle at 76% 30%, rgba(8, 127, 140, 0.14), transparent 16rem),
+      linear-gradient(135deg, #fff8ea 0%, #f9dfad 50%, #f4efe0 100%);
+  }
+
+  .best-art-visual {
+    @apply absolute inset-5 overflow-hidden rounded-[1.25rem] border border-[#e9b979]/70 bg-[#fffaf0] shadow-inner;
+  }
+
+  .best-art-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(90deg, rgba(185, 127, 63, 0.11) 0 1px, transparent 1px 52px),
+      repeating-linear-gradient(0deg, rgba(185, 127, 63, 0.11) 0 1px, transparent 1px 52px);
+  }
+
+  .best-art-sun,
+  .best-art-arch,
+  .best-art-motif {
+    @apply absolute block;
+  }
+
+  .best-art-sun {
+    @apply right-14 top-14 h-24 w-24 rounded-full bg-[#d94f1f]/85 shadow-[0_0_80px_rgba(217,79,31,0.35)];
+  }
+
+  .best-art-arch {
+    @apply left-1/2 top-20 h-64 w-48 -translate-x-1/2 rounded-t-full border-[18px] border-[#20675c] bg-[#f7c76b]/60;
+  }
+
+  .best-art-arch::after {
+    content: "";
+    position: absolute;
+    inset: 42px 32px 0;
+    border-radius: 999px 999px 0 0;
+    border: 10px solid rgba(217, 79, 31, 0.82);
+    border-bottom: 0;
+  }
+
+  .best-art-motif {
+    @apply h-28 w-28 rounded-full border-[10px] border-[#9c2d18]/90;
+  }
+
+  .best-art-motif::before,
+  .best-art-motif::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    background: #9c2d18;
+  }
+
+  .best-art-motif::before {
+    width: 18px;
+    height: 18px;
+    left: 24px;
+    top: 24px;
+  }
+
+  .best-art-motif::after {
+    width: 16px;
+    height: 16px;
+    right: 24px;
+    bottom: 26px;
+  }
+
+  .best-art-motif.motif-one {
+    @apply bottom-24 left-14;
+  }
+
+  .best-art-motif.motif-two {
+    @apply bottom-20 right-20 scale-75 border-[#20675c]/90;
+  }
+
+  .best-art-motif.motif-two::before,
+  .best-art-motif.motif-two::after {
+    background: #20675c;
+  }
+
+  .best-art-copy {
+    @apply relative z-[1] mt-auto max-w-md rounded-[1.25rem] border border-white/70 bg-[rgba(255,255,255,0.78)] p-5 shadow-2xl shadow-orange-950/15 backdrop-blur-xl;
+  }
+
+  .best-art-copy > span {
+    @apply text-xs font-black uppercase tracking-[0.18em] text-[#b83e15];
+  }
+
+  .best-art-copy strong {
+    @apply mt-2 block font-serif text-4xl font-black leading-none text-[#24150f];
+  }
+
+  .best-art-copy p {
+    @apply mt-3 text-sm font-bold leading-6 text-[#68483a];
+  }
+
+  .best-art-copy div {
+    @apply mt-4 flex flex-wrap gap-2;
+  }
+
+  .best-art-copy small {
+    @apply rounded-full bg-[#fff0d6] px-3 py-2 text-xs font-black text-[#7b2b18];
+  }
+
   .art-showcase-placeholder strong,
   .spotlight-visual strong {
     @apply text-2xl font-black text-[#24150f] dark:text-white;
