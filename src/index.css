@@ -364,7 +364,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-card {
-    @apply relative isolate flex h-[470px] items-stretch justify-stretch overflow-hidden p-5 text-left;
+    @apply relative isolate flex h-[470px] w-full cursor-pointer items-stretch justify-stretch overflow-hidden p-5 text-left transition hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-[#d94f1f]/30;
     background:
       radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.86), transparent 18rem),
       radial-gradient(circle at 76% 30%, rgba(8, 127, 140, 0.14), transparent 16rem),
@@ -450,30 +450,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   .best-art-motif.motif-two::before,
   .best-art-motif.motif-two::after {
     background: #20675c;
-  }
-
-  .best-art-copy {
-    @apply relative z-[1] mt-auto max-w-md rounded-[1.25rem] border border-white/50 bg-[rgba(255,255,255,0.54)] p-5 shadow-2xl shadow-orange-950/15 backdrop-blur-md;
-  }
-
-  .best-art-copy > span {
-    @apply text-sm font-black uppercase tracking-[0.18em] text-[#7b2b18];
-  }
-
-  .best-art-copy strong {
-    @apply mt-2 block font-serif text-4xl font-black leading-none text-[#24150f];
-  }
-
-  .best-art-copy p {
-    @apply mt-3 text-sm font-black leading-6 text-[#553222];
-  }
-
-  .best-art-copy div {
-    @apply mt-4 flex flex-wrap gap-2;
-  }
-
-  .best-art-copy small {
-    @apply rounded-full bg-white/65 px-3 py-2 text-xs font-black text-[#7b2b18] backdrop-blur-sm;
   }
 
   .art-showcase-placeholder strong,

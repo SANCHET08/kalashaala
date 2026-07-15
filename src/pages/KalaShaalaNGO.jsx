@@ -284,7 +284,12 @@ function KalaShaalaNGO() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="art-showcase"
             >
-              <div className="art-showcase-placeholder best-art-card" aria-label="Best Art of the Month">
+              <button
+                type="button"
+                className="art-showcase-placeholder best-art-card"
+                aria-label="View the artist behind Best Art of the Month"
+                onClick={() => goToPage("/artist/rj1")}
+              >
                 <div className="best-art-visual" aria-hidden="true">
                   <img src={bestArtMonthDummy} alt="" />
                   <span className="best-art-sun" />
@@ -292,16 +297,7 @@ function KalaShaalaNGO() {
                   <span className="best-art-motif motif-one" />
                   <span className="best-art-motif motif-two" />
                 </div>
-                <div className="best-art-copy">
-                  <span>Best Art of the Month</span>
-                  <strong>Monsoon Courtyard</strong>
-                  <p>This monthly pick celebrates a blue pottery inspired artwork for its calm interior palette, floral detailing, and handcrafted Jaipur character.</p>
-                  <div>
-                    <small>Rajasthan / Blue Pottery</small>
-                    <small>Featured July 2026</small>
-                  </div>
-                </div>
-              </div>
+              </button>
               <div className="floating-badge top-6 left-4"><Palette size={18} /> Monthly Pick</div>
             </Motion.div>
           </div>
