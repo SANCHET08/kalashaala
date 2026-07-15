@@ -453,11 +453,11 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-copy {
-    @apply relative z-[1] mt-auto max-w-md rounded-[1.25rem] border border-white/70 bg-[rgba(255,255,255,0.78)] p-5 shadow-2xl shadow-orange-950/15 backdrop-blur-xl;
+    @apply relative z-[1] mt-auto max-w-md rounded-[1.25rem] border border-white/50 bg-[rgba(255,255,255,0.54)] p-5 shadow-2xl shadow-orange-950/15 backdrop-blur-md;
   }
 
   .best-art-copy > span {
-    @apply text-xs font-black uppercase tracking-[0.18em] text-[#b83e15];
+    @apply text-sm font-black uppercase tracking-[0.18em] text-[#7b2b18];
   }
 
   .best-art-copy strong {
@@ -465,7 +465,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-copy p {
-    @apply mt-3 text-sm font-bold leading-6 text-[#68483a];
+    @apply mt-3 text-sm font-black leading-6 text-[#553222];
   }
 
   .best-art-copy div {
@@ -473,7 +473,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   }
 
   .best-art-copy small {
-    @apply rounded-full bg-[#fff0d6] px-3 py-2 text-xs font-black text-[#7b2b18];
+    @apply rounded-full bg-white/65 px-3 py-2 text-xs font-black text-[#7b2b18] backdrop-blur-sm;
   }
 
   .art-showcase-placeholder strong,

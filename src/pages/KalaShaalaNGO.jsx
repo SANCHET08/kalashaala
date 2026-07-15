@@ -295,7 +295,7 @@ function KalaShaalaNGO() {
                 <div className="best-art-copy">
                   <span>Best Art of the Month</span>
                   <strong>Monsoon Courtyard</strong>
-                  <p>Blue pottery inspired decor piece by a Jaipur artisan, selected for its calm interior palette and hand-painted floral detailing.</p>
+                  <p>This monthly pick celebrates a blue pottery inspired artwork for its calm interior palette, floral detailing, and handcrafted Jaipur character.</p>
                   <div>
                     <small>Rajasthan / Blue Pottery</small>
                     <small>Featured July 2026</small>
@@ -303,7 +303,6 @@ function KalaShaalaNGO() {
                 </div>
               </div>
               <div className="floating-badge top-6 left-4"><Palette size={18} /> Monthly Pick</div>
-              <div className="floating-badge bottom-6 right-4"><HeartHandshake size={18} /> Buyer ready</div>
             </Motion.div>
           </div>
         </section>
