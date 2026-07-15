@@ -1,0 +1,1547 @@
+{
+  "_type": "Project",
+  "_id": "kalashala-project",
+  "name": "KalaShaala ER and DFD Diagrams",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "kalashala-model",
+      "_parent": {
+        "$ref": "kalashala-project"
+      },
+      "name": "KalaShaala Website Model",
+      "ownedElements": [
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "er-diagram",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "ER Diagram - KalaShaala MySQL Database",
+          "ownedViews": [
+            {
+              "_type": "UMLClassView",
+              "_id": "view-custom-user",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-custom-user"
+              },
+              "left": 30,
+              "top": 40,
+              "width": 260,
+              "height": 210
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-portfolio",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-portfolio"
+              },
+              "left": 360,
+              "top": 40,
+              "width": 260,
+              "height": 185
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-content",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-content"
+              },
+              "left": 30,
+              "top": 310,
+              "width": 300,
+              "height": 260
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-blog-post",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-blog-post"
+              },
+              "left": 410,
+              "top": 280,
+              "width": 250,
+              "height": 120
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-video",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-video"
+              },
+              "left": 710,
+              "top": 280,
+              "width": 250,
+              "height": 140
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-document",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-document"
+              },
+              "left": 1010,
+              "top": 280,
+              "width": 250,
+              "height": 130
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-image-gallery",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-image-gallery"
+              },
+              "left": 410,
+              "top": 480,
+              "width": 250,
+              "height": 95
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-gallery-image",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-gallery-image"
+              },
+              "left": 710,
+              "top": 480,
+              "width": 250,
+              "height": 130
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-course",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-course"
+              },
+              "left": 410,
+              "top": 670,
+              "width": 250,
+              "height": 130
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-course-module",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-course-module"
+              },
+              "left": 710,
+              "top": 670,
+              "width": 290,
+              "height": 250
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-comment",
+              "_parent": {
+                "$ref": "er-diagram"
+              },
+              "model": {
+                "$ref": "entity-comment"
+              },
+              "left": 30,
+              "top": 660,
+              "width": 270,
+              "height": 145
+            }
+          ]
+        },
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "dfd-diagram",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "DFD Level 1 - KalaShaala Website",
+          "ownedViews": [
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-user",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-user"
+              },
+              "left": 30,
+              "top": 80,
+              "width": 220,
+              "height": 95
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-artist",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-artist"
+              },
+              "left": 30,
+              "top": 240,
+              "width": 220,
+              "height": 95
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-admin",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-admin"
+              },
+              "left": 30,
+              "top": 400,
+              "width": 220,
+              "height": 95
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-frontend",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-frontend"
+              },
+              "left": 330,
+              "top": 80,
+              "width": 260,
+              "height": 120
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-auth",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-auth"
+              },
+              "left": 670,
+              "top": 40,
+              "width": 260,
+              "height": 130
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-artisan",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-artisan"
+              },
+              "left": 670,
+              "top": 220,
+              "width": 260,
+              "height": 130
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-content",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-content"
+              },
+              "left": 670,
+              "top": 400,
+              "width": 260,
+              "height": 145
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-security",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-security"
+              },
+              "left": 330,
+              "top": 290,
+              "width": 260,
+              "height": 120
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-db",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-db"
+              },
+              "left": 1030,
+              "top": 170,
+              "width": 260,
+              "height": 145
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-media",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-media"
+              },
+              "left": 1030,
+              "top": 390,
+              "width": 260,
+              "height": 120
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "view-dfd-external",
+              "_parent": {
+                "$ref": "dfd-diagram"
+              },
+              "model": {
+                "$ref": "dfd-external"
+              },
+              "left": 1030,
+              "top": 40,
+              "width": 260,
+              "height": 95
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-custom-user",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "CustomUser",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-id",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-username",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "username: varchar"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-email",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "email: varchar UNIQUE"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-password",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "password: varchar"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-name",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "name: varchar(255)"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-type",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "user_type: buyer | artist"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-custom-user-django",
+              "_parent": {
+                "$ref": "entity-custom-user"
+              },
+              "name": "Django auth fields: is_staff, is_active, date_joined"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-portfolio",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Portfolio",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-portfolio-id",
+              "_parent": {
+                "$ref": "entity-portfolio"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-portfolio-user",
+              "_parent": {
+                "$ref": "entity-portfolio"
+              },
+              "name": "user_id: FK -> CustomUser.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-portfolio-title",
+              "_parent": {
+                "$ref": "entity-portfolio"
+              },
+              "name": "title, category, description, year"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-portfolio-details",
+              "_parent": {
+                "$ref": "entity-portfolio"
+              },
+              "name": "details: JSON text"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-portfolio-dates",
+              "_parent": {
+                "$ref": "entity-portfolio"
+              },
+              "name": "created_at, updated_at"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-content",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-id",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-contributor",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "contributor_id: FK -> CustomUser.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-title",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "title, description, slug UNIQUE"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-media",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "thumbnail: image path"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-category",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "category, content_type, tags"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-stats",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "is_featured, view_count, download_count"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-content-dates",
+              "_parent": {
+                "$ref": "entity-content"
+              },
+              "name": "upload_date, last_updated"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-blog-post",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "BlogPost",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-blog-id",
+              "_parent": {
+                "$ref": "entity-blog-post"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-blog-content",
+              "_parent": {
+                "$ref": "entity-blog-post"
+              },
+              "name": "content_id: FK -> Content.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-blog-text",
+              "_parent": {
+                "$ref": "entity-blog-post"
+              },
+              "name": "text_content, summary"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-video",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Video",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-video-id",
+              "_parent": {
+                "$ref": "entity-video"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-video-content",
+              "_parent": {
+                "$ref": "entity-video"
+              },
+              "name": "content_id: FK -> Content.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-video-file",
+              "_parent": {
+                "$ref": "entity-video"
+              },
+              "name": "video_file, video_url, duration"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-document",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Document",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-document-id",
+              "_parent": {
+                "$ref": "entity-document"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-document-content",
+              "_parent": {
+                "$ref": "entity-document"
+              },
+              "name": "content_id: FK -> Content.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-document-file",
+              "_parent": {
+                "$ref": "entity-document"
+              },
+              "name": "document_file, page_count, file_size"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-image-gallery",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "ImageGallery",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-gallery-id",
+              "_parent": {
+                "$ref": "entity-image-gallery"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-gallery-content",
+              "_parent": {
+                "$ref": "entity-image-gallery"
+              },
+              "name": "content_id: FK -> Content.id"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-gallery-image",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "GalleryImage",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-gallery-image-id",
+              "_parent": {
+                "$ref": "entity-gallery-image"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-gallery-image-gallery",
+              "_parent": {
+                "$ref": "entity-gallery-image"
+              },
+              "name": "gallery_id: FK -> ImageGallery.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-gallery-image-file",
+              "_parent": {
+                "$ref": "entity-gallery-image"
+              },
+              "name": "image, caption, order"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-course",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Course",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-course-id",
+              "_parent": {
+                "$ref": "entity-course"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-course-content",
+              "_parent": {
+                "$ref": "entity-course"
+              },
+              "name": "content_id: FK -> Content.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-course-fields",
+              "_parent": {
+                "$ref": "entity-course"
+              },
+              "name": "price, is_free, duration"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-course-module",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "CourseModule",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-id",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-course",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "course_id: FK -> Course.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-core",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "title, description, order, content_type"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-blog",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "text_content, summary"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-video",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "video_file, video_url, duration"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-module-doc",
+              "_parent": {
+                "$ref": "entity-course-module"
+              },
+              "name": "document_file, page_count, file_size"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "entity-comment",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Comment",
+          "stereotype": "Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-comment-id",
+              "_parent": {
+                "$ref": "entity-comment"
+              },
+              "name": "id: BigAutoField PK"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-comment-content",
+              "_parent": {
+                "$ref": "entity-comment"
+              },
+              "name": "content_id: FK -> Content.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-comment-user",
+              "_parent": {
+                "$ref": "entity-comment"
+              },
+              "name": "user_id: FK -> CustomUser.id"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-comment-parent",
+              "_parent": {
+                "$ref": "entity-comment"
+              },
+              "name": "parent_id: FK -> Comment.id nullable"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "attr-comment-text",
+              "_parent": {
+                "$ref": "entity-comment"
+              },
+              "name": "text, created_at"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-user",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Visitor / Buyer / Customer",
+          "stereotype": "External Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-user-data",
+              "_parent": {
+                "$ref": "dfd-user"
+              },
+              "name": "sends: registration, login, search, ratings"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-artist",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Artist / Artisan",
+          "stereotype": "External Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-artist-data",
+              "_parent": {
+                "$ref": "dfd-artist"
+              },
+              "name": "sends: profile, portfolio, uploaded work"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-admin",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Admin",
+          "stereotype": "External Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-admin-data",
+              "_parent": {
+                "$ref": "dfd-admin"
+              },
+              "name": "manages: users, content, courses"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-frontend",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "React Frontend",
+          "stereotype": "Process",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-frontend-pages",
+              "_parent": {
+                "$ref": "dfd-frontend"
+              },
+              "name": "pages: login, register, explore artists, events"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-frontend-data",
+              "_parent": {
+                "$ref": "dfd-frontend"
+              },
+              "name": "calls Django REST APIs"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-auth",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Auth and Verification",
+          "stereotype": "Process",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-auth-fields",
+              "_parent": {
+                "$ref": "dfd-auth"
+              },
+              "name": "validates credentials, phone/email verification"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-auth-output",
+              "_parent": {
+                "$ref": "dfd-auth"
+              },
+              "name": "creates user session/account"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-artisan",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Artisan Discovery",
+          "stereotype": "Process",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-artisan-fields",
+              "_parent": {
+                "$ref": "dfd-artisan"
+              },
+              "name": "filters by state, art type, interior design interest"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-artisan-output",
+              "_parent": {
+                "$ref": "dfd-artisan"
+              },
+              "name": "returns artist listings and map results"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-content",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content / Course / Blog Management",
+          "stereotype": "Process",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-content-fields",
+              "_parent": {
+                "$ref": "dfd-content"
+              },
+              "name": "creates blog, video, PDF, gallery, course modules"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-content-output",
+              "_parent": {
+                "$ref": "dfd-content"
+              },
+              "name": "stores metadata and media references"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-security",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Request Security and Upload Limits",
+          "stereotype": "Process",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-security-fields",
+              "_parent": {
+                "$ref": "dfd-security"
+              },
+              "name": "checks request size, query length, throttling"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-db",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "MySQL Database",
+          "stereotype": "Data Store",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-db-tables",
+              "_parent": {
+                "$ref": "dfd-db"
+              },
+              "name": "stores: users, portfolio, content, courses, comments"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-db-created",
+              "_parent": {
+                "$ref": "dfd-db"
+              },
+              "name": "database name: kalashala"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-media",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Media Storage",
+          "stereotype": "Data Store",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-media-fields",
+              "_parent": {
+                "$ref": "dfd-media"
+              },
+              "name": "stores: thumbnails, videos, documents, gallery images"
+            }
+          ]
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "dfd-external",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "External APIs / Services",
+          "stereotype": "External Entity",
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "dfd-external-fields",
+              "_parent": {
+                "$ref": "dfd-external"
+              },
+              "name": "government schemes API, email/SMS provider"
+            }
+          ]
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-user-portfolio",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "CustomUser 1 to many Portfolio",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-portfolio-end1",
+            "reference": {
+              "$ref": "entity-custom-user"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-portfolio-end2",
+            "reference": {
+              "$ref": "entity-portfolio"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-user-content",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "CustomUser 1 to many Content",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-content-end1",
+            "reference": {
+              "$ref": "entity-custom-user"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-content-end2",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-blog",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many BlogPost",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-blog-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-blog-end2",
+            "reference": {
+              "$ref": "entity-blog-post"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-video",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many Video",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-video-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-video-end2",
+            "reference": {
+              "$ref": "entity-video"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-document",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many Document",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-document-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-document-end2",
+            "reference": {
+              "$ref": "entity-document"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-gallery",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many ImageGallery",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-gallery-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-gallery-end2",
+            "reference": {
+              "$ref": "entity-image-gallery"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-gallery-image",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "ImageGallery 1 to many GalleryImage",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-gallery-image-end1",
+            "reference": {
+              "$ref": "entity-image-gallery"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-gallery-image-end2",
+            "reference": {
+              "$ref": "entity-gallery-image"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-course",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many Course",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-course-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-course-end2",
+            "reference": {
+              "$ref": "entity-course"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-course-module",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Course 1 to many CourseModule",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-course-module-end1",
+            "reference": {
+              "$ref": "entity-course"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-course-module-end2",
+            "reference": {
+              "$ref": "entity-course-module"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-content-comment",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Content 1 to many Comment",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-comment-end1",
+            "reference": {
+              "$ref": "entity-content"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-content-comment-end2",
+            "reference": {
+              "$ref": "entity-comment"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-user-comment",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "CustomUser 1 to many Comment",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-comment-end1",
+            "reference": {
+              "$ref": "entity-custom-user"
+            },
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-user-comment-end2",
+            "reference": {
+              "$ref": "entity-comment"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "rel-comment-replies",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "Comment self relation for replies",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-comment-replies-end1",
+            "reference": {
+              "$ref": "entity-comment"
+            },
+            "multiplicity": "0..1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "rel-comment-replies-end2",
+            "reference": {
+              "$ref": "entity-comment"
+            },
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-user-frontend",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "forms, search, ratings",
+          "source": {
+            "$ref": "dfd-user"
+          },
+          "target": {
+            "$ref": "dfd-frontend"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-artist-frontend",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "profile and artwork uploads",
+          "source": {
+            "$ref": "dfd-artist"
+          },
+          "target": {
+            "$ref": "dfd-frontend"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-admin-content",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "content/course management",
+          "source": {
+            "$ref": "dfd-admin"
+          },
+          "target": {
+            "$ref": "dfd-content"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-frontend-security",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "validated API requests",
+          "source": {
+            "$ref": "dfd-frontend"
+          },
+          "target": {
+            "$ref": "dfd-security"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-security-auth",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "login/register requests",
+          "source": {
+            "$ref": "dfd-security"
+          },
+          "target": {
+            "$ref": "dfd-auth"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-security-artisan",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "artist discovery requests",
+          "source": {
+            "$ref": "dfd-security"
+          },
+          "target": {
+            "$ref": "dfd-artisan"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-security-content",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "content and upload requests",
+          "source": {
+            "$ref": "dfd-security"
+          },
+          "target": {
+            "$ref": "dfd-content"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-auth-db",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "users and sessions",
+          "source": {
+            "$ref": "dfd-auth"
+          },
+          "target": {
+            "$ref": "dfd-db"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-artisan-db",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "artist profile queries",
+          "source": {
+            "$ref": "dfd-artisan"
+          },
+          "target": {
+            "$ref": "dfd-db"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-content-db",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "metadata records",
+          "source": {
+            "$ref": "dfd-content"
+          },
+          "target": {
+            "$ref": "dfd-db"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-content-media",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "uploaded files",
+          "source": {
+            "$ref": "dfd-content"
+          },
+          "target": {
+            "$ref": "dfd-media"
+          }
+        },
+        {
+          "_type": "UMLDependency",
+          "_id": "flow-auth-external",
+          "_parent": {
+            "$ref": "kalashala-model"
+          },
+          "name": "verification code delivery",
+          "source": {
+            "$ref": "dfd-auth"
+          },
+          "target": {
+            "$ref": "dfd-external"
+          }
+        }
+      ]
+    }
+  ]
+}

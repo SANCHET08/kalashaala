@@ -1,0 +1,29 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local databases
+*.sqlite3
+db.sqlite3
+
+# Python virtual environments
+.venv/
+env/
+venv/
+.env/
+.env
+.env.local
+!.env.example
+
+# Node modules and IDE files
+node_modules
+.vscode
+
+# Build output and local hosting state
+dist/
+.netlify/
+
+# Runtime logs and uploaded media
+*.log
+backend/media/
