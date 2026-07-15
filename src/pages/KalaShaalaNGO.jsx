@@ -312,10 +312,10 @@ function KalaShaalaNGO() {
               <p>A creative economy where traditional and modern Indian artists are seen, respected, and sustainably supported.</p>
             </div>
             <div className="stats-grid">
-              <Counter value={4200} label="Registered Artists" />
-              <Counter value={28} label="States Covered" />
-              <Counter value={186} label="Art Events Conducted" />
-              <Counter value={52000} label="Lives Impacted" />
+              <Counter value={0} label="Registered Artists" />
+              <Counter value={0} label="States Covered" />
+              <Counter value={0} label="Art Events Conducted" />
+              <Counter value={0} label="Lives Impacted" />
             </div>
           </div>
         </Section>
