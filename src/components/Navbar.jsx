@@ -22,7 +22,6 @@ export default function Navbar() {
 
   const links = [
     { label: 'Home',     path: '/' },
-    { label: 'Discovery', path: '/artisan-discovery' },
     { label: 'Artisans', path: '/explore-artists' },
     { label: 'Schemes',  path: '/schemes' },
     { label: 'Login',    path: '/login' },

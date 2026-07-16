@@ -38,7 +38,6 @@ const navItems = [
   ["Home", "home"],
   ["About Us", "about"],
   ["Art Categories", "categories"],
-  ["Discovery", "artisan-discovery"],
   ["Events & Workshops", "events"],
   ["Gallery", "gallery"],
   ["Contact", "contact"],
