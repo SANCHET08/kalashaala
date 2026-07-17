@@ -15,13 +15,6 @@ import {
 } from "../utils/uploadLimits";
 
 const pageCopy = {
-  user: {
-    eyebrow: "Community Registration",
-    title: "Register as User",
-    intro: "Create your KalaShaala profile to follow artists, save art forms, join events, and receive cultural updates.",
-    button: "Create User Account",
-    fields: ["Name", "Email", "Mobile Number", "Interests", "Password"],
-  },
   customer: {
     eyebrow: "Interior Design Artisan Registration",
     title: "Register for Interior Artisan Work",
@@ -64,7 +57,7 @@ function getFieldType(label) {
 function RegisterPage({ type }) {
   const [dark, setDark] = useState(false);
   const [uploadFeedback, setUploadFeedback] = useState({});
-  const copy = pageCopy[type] || pageCopy.user;
+  const copy = pageCopy[type] || pageCopy.customer;
   const isCustomer = type === "customer";
   const isArtist = type === "artist";
 
@@ -156,15 +149,8 @@ function RegisterPage({ type }) {
                   ))}
                 </div>
               </fieldset>
-            ) : (
-              <select aria-label="Preferred art interest">
-                <option>Painting</option>
-                <option>Folk Art</option>
-                <option>Textile Arts</option>
-                <option>Photography</option>
-              </select>
-            )}
-            <textarea placeholder={isArtist ? "Artist bio and craft story" : isCustomer ? "Tell us about your interior project, room type, preferred style, budget, or timeline" : "Tell us what you want to explore on KalaShaala"} />
+            ) : null}
+            <textarea placeholder={isArtist ? "Artist bio and craft story" : "Tell us about your interior project, room type, preferred style, budget, or timeline"} />
             {isArtist ? (
               <div className="upload-control">
                 <label className="upload-box">
@@ -196,24 +182,6 @@ function RegisterPage({ type }) {
                 {uploadFeedback.partnerDocument && (
                   <p className={`upload-feedback ${uploadFeedback.partnerDocument.type === "error" ? "is-error" : ""}`}>
                     {uploadFeedback.partnerDocument.text}
-                  </p>
-                )}
-              </div>
-            )}
-            {!isCustomer && !isArtist && (
-              <div className="upload-control">
-                <label className="upload-box">
-                  <Upload size={20} />
-                  Optional Profile Image (max 5 MB)
-                  <input
-                    type="file"
-                    accept={ARTWORK_UPLOAD_ACCEPT}
-                    onChange={(event) => handleUploadChange(event, "profileImage")}
-                  />
-                </label>
-                {uploadFeedback.profileImage && (
-                  <p className={`upload-feedback ${uploadFeedback.profileImage.type === "error" ? "is-error" : ""}`}>
-                    {uploadFeedback.profileImage.text}
                   </p>
                 )}
               </div>

@@ -14,7 +14,7 @@ from django.conf import settings
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from backend.security import clean_mapping, clean_text
-from .models import CustomUser, Portfolio
+from .models import Portfolio
 from .serializers import PortfolioSerializer, CustomUserSerializer
 from .throttles import LoginRateThrottle
 from urllib import request as urlrequest
@@ -46,7 +46,13 @@ class SignupView(APIView):
         name = data.get("name")
         email = data.get("email", "").lower()
         password = data.get("password")
-        user_type = data.get("user_type")
+        user_type = data.get("user_type") or "buyer"
+
+        if user_type == "customer":
+            user_type = "buyer"
+
+        if user_type not in {"buyer", "artist"}:
+            return Response({"error": "Invalid account type"}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
             validate_email(email)
@@ -101,48 +107,6 @@ class LogoutView(APIView):
     def post(self, request):
         logout(request)
         return Response({'success': 'User logged out'}, status=status.HTTP_200_OK)
-
-class RegisterView(APIView):
-    permission_classes = [AllowAny]
-    
-    def post(self, request):
-        try:
-            data = clean_mapping(request.data, ["username", "email", "password", "name", "userType"], max_length=200)
-        except ValueError as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
-        username = data.get('username')
-        email = data.get('email', '').lower()
-        password = data.get('password')
-        name = data.get('name')
-        user_type = data.get('userType', 'user')
-        
-        if not username or not email or not password:
-            return Response({'error': 'Please provide username, email, and password'},
-                            status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            validate_email(email)
-        except ValidationError:
-            return Response({"error": "Invalid email address"}, status=status.HTTP_400_BAD_REQUEST)
-
-        if len(password) > 128:
-            return Response({"error": "Invalid password length"}, status=status.HTTP_400_BAD_REQUEST)
-        
-        if CustomUser.objects.filter(username=username).exists():
-            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
-        
-        if CustomUser.objects.filter(email=email).exists():
-            return Response({'error': 'Email already exists'}, status=status.HTTP_400_BAD_REQUEST)
-        
-        user = CustomUser.objects.create_user(
-            username=username,
-            email=email,
-            password=password,
-            name=name,
-            user_type=user_type
-        )
-        
-        return Response({'success': 'User created successfully'}, status=status.HTTP_201_CREATED)
 
 class UserView(APIView):
     """Get current user information"""

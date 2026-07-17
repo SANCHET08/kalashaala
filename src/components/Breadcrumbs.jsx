@@ -9,7 +9,6 @@ const routeLabels = {
   "/artisan-discovery": "Artisan Discovery",
   "/event-registration": "Event Registration",
   "/subscribe": "Subscribe",
-  "/register-user": "User Registration",
   "/register-customer": "Customer Registration",
   "/register-artist": "Artist Registration",
 };

@@ -371,13 +371,6 @@ function KalaShaalaNGO() {
           </form>
         </Section>
 
-        <Section id="user-register" eyebrow="User Registration" title="Create your KalaShaala community profile">
-          <form className="form-grid compact">
-            {["Name", "Email", "Mobile Number", "Interests", "Password"].map((label) => <input key={label} placeholder={label} type={label === "Password" ? "password" : "text"} />)}
-            <button type="button" className="cta-primary">Register as User</button>
-          </form>
-        </Section>
-
         <Section id="events" eyebrow="Events & Workshops" title="Meet artists in the room where culture moves">
           <div className="event-grid">
             {events.map(([type, name, place, date, detail]) => (

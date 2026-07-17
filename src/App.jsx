@@ -59,7 +59,6 @@ function App() {
           <Route path="/event-registration" element={<EventRegistration />} />
           <Route path="/subscribe" element={<SubscribePage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register-user" element={<RegisterPage type="user" />} />
           <Route path="/register-customer" element={<RegisterPage type="customer" />} />
           <Route path="/register-artist" element={<RegisterPage type="artist" />} />
         </Routes>
