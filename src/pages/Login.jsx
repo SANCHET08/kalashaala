@@ -140,7 +140,7 @@ const Login = () => {
     // Check if user is already logged in
     const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
     if (isAuthenticated) {
-      navigate('/');
+      navigate("/home", { replace: true });
     }
   }, [navigate]);
 
@@ -264,8 +264,8 @@ const Login = () => {
           console.error("Error fetching user data after login:", userError);
         }
         
-        // Navigate to home page
-        navigate("/");
+        const destination = location.state?.from?.pathname || "/home";
+        navigate(destination, { replace: true });
       } else {
         setError(data.error || "Login failed. Please check your credentials.");
       }
@@ -460,8 +460,8 @@ const Login = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-blue-600 hover:underline font-medium">
-                  Sign up
+                <Link to="/" className="text-blue-600 hover:underline font-medium">
+                  Choose signup type
                 </Link>
               </p>
             </div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const routeLabels = {
   "/": "Home",
+  "/home": "Home",
   "/explore-artists": "Explore Artists",
   "/artist": "Artist Profile",
   "/gov-artisan-visualization": "Govt Artisan Visualization",
@@ -21,7 +22,7 @@ function getCurrentLabel(pathname) {
 export default function Breadcrumbs() {
   const { pathname } = useLocation();
 
-  if (pathname === "/") return null;
+  if (pathname === "/" || pathname === "/home") return null;
 
   const currentLabel = getCurrentLabel(pathname);
 
@@ -29,7 +30,7 @@ export default function Breadcrumbs() {
     <nav className="site-breadcrumbs" aria-label="Breadcrumb">
       <ol>
         <li>
-          <Link to="/" aria-label="Go to KalaShaala home">
+          <Link to={localStorage.getItem("isAuthenticated") === "true" ? "/home" : "/"} aria-label="Go to KalaShaala home">
             <Home size={15} />
             <span>Home</span>
           </Link>

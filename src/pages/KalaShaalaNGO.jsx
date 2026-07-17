@@ -208,6 +208,16 @@ function KalaShaalaNGO() {
     goToPage("/subscribe");
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userType");
+    localStorage.removeItem("userId");
+    goToPage("/");
+  };
+
+  const currentUserName = localStorage.getItem("userName") || "Member";
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#fff8ed] text-[#24150f] transition-colors duration-300 dark:bg-[#100d11] dark:text-[#fff6e6]">
       <div className="loading-strip" />
@@ -224,9 +234,8 @@ function KalaShaalaNGO() {
           </div>
           <div className="hidden items-center gap-2 lg:flex">
             <button onClick={goToSubscribe} className="pill-button subscribe">Subscribe</button>
-            <button onClick={() => goToPage("/register-customer")} className="pill-button soft">Sign up as Customer</button>
-            <button onClick={() => goToPage("/register-artist")} className="pill-button warm">Sign up as Artist</button>
-            <button onClick={() => goToPage("/login")} className="icon-button" aria-label="Login"><CircleUserRound size={18} /></button>
+            <span className="member-chip"><CircleUserRound size={17} /> {currentUserName}</span>
+            <button onClick={handleLogout} className="pill-button warm">Logout</button>
             <button onClick={() => setDark((value) => !value)} className="icon-button" aria-label="Toggle dark mode">
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -245,9 +254,8 @@ function KalaShaalaNGO() {
             <Motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="mobile-menu lg:hidden">
               {navItems.map(([label, id]) => <button key={id} onClick={() => scrollTo(id)}>{label}</button>)}
               <button onClick={goToSubscribe}>Subscribe</button>
-              <button onClick={() => goToPage("/register-customer")}>Sign up as Customer</button>
-              <button onClick={() => goToPage("/register-artist")}>Sign up as Artist</button>
-              <button onClick={() => goToPage("/login")}>Login</button>
+              <button type="button" className="mobile-menu__member"><CircleUserRound size={17} /> {currentUserName}</button>
+              <button onClick={handleLogout}>Logout</button>
             </Motion.div>
           )}
         </AnimatePresence>

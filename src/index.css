@@ -109,6 +109,10 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   .pill-button.warm { @apply bg-[#d94f1f] text-white shadow-lg shadow-orange-900/20 hover:bg-[#b83e15]; }
   .pill-button.subscribe { @apply border border-[#d94f1f]/25 bg-white/80 text-[#9c2d18] shadow-sm shadow-orange-950/5 hover:bg-[#fff1dc] hover:text-[#d94f1f] dark:border-white/10 dark:bg-white/10 dark:text-[#ffc067] dark:hover:bg-white/15; }
 
+  .member-chip {
+    @apply inline-flex min-h-10 max-w-48 items-center gap-2 truncate rounded-full bg-[#fff2dc] px-4 py-2 text-sm font-black text-[#4a281a] shadow-sm shadow-orange-950/5 dark:bg-white/10 dark:text-white;
+  }
+
   .icon-button {
     @apply grid h-10 w-10 place-items-center rounded-full bg-[#f7ead5] text-[#3a2117] transition hover:bg-[#edd1a8] active:scale-95 dark:bg-white/10 dark:text-white dark:hover:bg-white/15;
   }
@@ -119,6 +123,78 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
   .mobile-menu button {
     @apply block w-full rounded-lg px-3 py-3 text-left font-semibold hover:bg-orange-50 dark:hover:bg-white/10;
+  }
+
+  .mobile-menu__member {
+    @apply flex items-center gap-2 text-[#9c2d18] dark:text-[#ffc067];
+  }
+
+  .auth-gateway {
+    @apply min-h-screen bg-[#fff8ed] px-4 py-6 text-[#24150f] dark:bg-[#100d11] dark:text-[#fff6e6] sm:px-6 lg:px-8;
+    background:
+      radial-gradient(circle at 12% 10%, rgba(217, 79, 31, 0.18), transparent 30%),
+      radial-gradient(circle at 88% 14%, rgba(8, 127, 140, 0.16), transparent 32%),
+      linear-gradient(135deg, #fff8ed 0%, #fff1db 46%, #eef5e9 100%);
+  }
+
+  .dark .auth-gateway {
+    background:
+      radial-gradient(circle at 12% 10%, rgba(217, 79, 31, 0.18), transparent 30%),
+      radial-gradient(circle at 88% 14%, rgba(8, 127, 140, 0.14), transparent 32%),
+      linear-gradient(135deg, #100d11 0%, #1a1110 52%, #101719 100%);
+  }
+
+  .auth-gateway__hero {
+    @apply mx-auto grid min-h-[calc(100vh-3rem)] max-w-7xl items-center gap-8 lg:grid-cols-[0.95fr_1.05fr];
+  }
+
+  .auth-gateway__copy {
+    @apply max-w-2xl;
+  }
+
+  .auth-gateway__brand {
+    @apply mb-10 inline-flex;
+  }
+
+  .auth-gateway__copy h1 {
+    @apply mt-4 max-w-3xl text-5xl font-black leading-[0.98] text-[#2a1710] dark:text-white sm:text-6xl lg:text-7xl;
+  }
+
+  .auth-gateway__copy p:not(.eyebrow) {
+    @apply mt-6 max-w-xl text-lg font-semibold leading-8 text-[#68483a] dark:text-[#ead6c0];
+  }
+
+  .auth-gateway__actions {
+    @apply mt-8 grid gap-3 sm:max-w-xl sm:grid-cols-2;
+  }
+
+  .auth-gateway__primary,
+  .auth-gateway__secondary {
+    @apply inline-flex min-h-14 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition active:scale-95;
+  }
+
+  .auth-gateway__primary {
+    @apply bg-[#d94f1f] text-white shadow-xl shadow-orange-950/20 hover:bg-[#b83e15] sm:col-span-2;
+  }
+
+  .auth-gateway__secondary {
+    @apply border border-[#d94f1f]/20 bg-white/80 text-[#4a281a] shadow-lg shadow-orange-950/5 backdrop-blur-xl hover:bg-[#fff0d6] dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15;
+  }
+
+  .auth-gateway__secondary--warm {
+    @apply bg-[#f3e2ca] text-[#7b321c] hover:bg-[#eed0a5] dark:bg-[#d94f1f]/25 dark:text-[#ffd7bf];
+  }
+
+  .auth-gateway__visual {
+    @apply relative min-h-[28rem] overflow-hidden rounded-[2rem] border border-white/60 bg-white/50 p-3 shadow-2xl shadow-orange-950/15 backdrop-blur-xl dark:border-white/10 dark:bg-white/10;
+  }
+
+  .auth-gateway__visual img {
+    @apply h-full min-h-[28rem] w-full rounded-[1.5rem] object-cover;
+  }
+
+  .auth-gateway__visual div {
+    @apply absolute left-7 top-7 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-black text-[#4a281a] shadow-lg backdrop-blur-xl dark:bg-black/50 dark:text-white;
   }
 
   .site-breadcrumbs {
