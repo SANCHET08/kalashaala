@@ -9,7 +9,7 @@ const subscriptionOptions = [
     id: "art-lover",
     title: "Art Lover",
     price: "Rs. 99/month",
-    description: "Monthly art updates, early gallery previews, and saved inspiration lists.",
+    description: "Monthly art updates, early artwork previews, and saved inspiration lists.",
     icon: Palette,
   },
   {

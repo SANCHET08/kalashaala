@@ -19,7 +19,6 @@ CONTENT_TYPE_CHOICES = [
     ('blog', 'Blog Post'),
     ('video', 'Video'),
     ('pdf', 'PDF'),
-    ('image_gallery', 'Image Gallery'),
     ('presentation', 'Presentation'),
     ('course', 'Course'),
 ]
@@ -92,26 +91,6 @@ class Document(models.Model):
 
     def __str__(self):
         return f"Document: {self.content.title}"
-
-class ImageGallery(models.Model):
-    """Model for image gallery content"""
-    content = models.ForeignKey(Content, on_delete=models.CASCADE, related_name='gallery_details')
-    
-    def __str__(self):
-        return f"Gallery: {self.content.title}"
-
-class GalleryImage(models.Model):
-    """Individual images for an image gallery"""
-    gallery = models.ForeignKey(ImageGallery, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='gallery/')
-    caption = models.CharField(max_length=255, blank=True)
-    order = models.PositiveIntegerField(default=0)
-
-    class Meta:
-        ordering = ['order']
-
-    def __str__(self):
-        return f"Image {self.id} in {self.gallery}"
 
 class Course(models.Model):
     """Model for online courses"""

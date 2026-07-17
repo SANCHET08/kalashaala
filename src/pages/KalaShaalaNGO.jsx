@@ -3,7 +3,6 @@ import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-mot
 import {
   ArrowUp,
   CalendarDays,
-  Camera,
   CircleUserRound,
   Facebook,
   HeartHandshake,
@@ -14,7 +13,6 @@ import {
   Moon,
   Palette,
   Phone,
-  Play,
   Send,
   Sparkles,
   Sun,
@@ -39,7 +37,6 @@ const navItems = [
   ["About Us", "about"],
   ["Art Categories", "categories"],
   ["Events & Workshops", "events"],
-  ["Gallery", "gallery"],
   ["Contact", "contact"],
 ];
 
@@ -60,15 +57,6 @@ const events = [
   ["Workshops", "Natural Pigment Lab", "Jaipur", "20 Jun 2026", "Hands-on color making with mineral and plant pigments."],
   ["Exhibitions", "Stories in Thread", "Kolkata", "02 Jul 2026", "Textile-led exhibition featuring women artisan collectives."],
   ["Cultural Festivals", "Monsoon Folk Weekend", "Mumbai", "18 Jul 2026", "Performances, talks, pop-up studios, and craft stalls."],
-];
-
-const gallery = [
-  ["Madhubani pigments", "image"],
-  ["Warli workshop", "video"],
-  ["Handloom detail", "image"],
-  ["Studio portrait", "image"],
-  ["Gallery evening", "video"],
-  ["Pottery textures", "image"],
 ];
 
 const faq = {
@@ -154,7 +142,6 @@ function KalaShaalaNGO() {
   const navigate = useNavigate();
   const [dark, setDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [lightbox, setLightbox] = useState(null);
   const [chatOpen, setChatOpen] = useState(false);
   const [activeSocial, setActiveSocial] = useState("Instagram");
   const [messages, setMessages] = useState([{ from: "bot", text: "Namaste! I can help you explore KalaShaala, artists, events, and support options." }]);
@@ -385,19 +372,6 @@ function KalaShaalaNGO() {
           </div>
         </Section>
 
-        <Section id="gallery" eyebrow="Gallery" title="A living wall of artworks, videos, and artist highlights">
-          <div className="masonry-gallery">
-            {gallery.map(([title, type], index) => (
-              <button className={index % 3 === 0 ? "tall" : ""} key={title} onClick={() => setLightbox({ title, type })}>
-                <div className="gallery-tile-visual" aria-hidden="true">
-                  {type === "video" ? <Play size={34} /> : <Camera size={34} />}
-                </div>
-                <span>{type === "video" ? <Play size={18} /> : <Camera size={18} />} {title}</span>
-              </button>
-            ))}
-          </div>
-        </Section>
-
         <Section id="contact" eyebrow="Contact" title="Partner, support, or bring KalaShaala to your city">
           <div className="contact-grid">
             <form className="contact-form">
@@ -469,17 +443,6 @@ function KalaShaalaNGO() {
         <button onClick={() => setChatOpen((value) => !value)} className="chat-toggle" aria-label="Open chatbot"><Sparkles size={22} /></button>
       </div>
 
-      <AnimatePresence>
-        {lightbox && (
-          <Motion.div className="lightbox" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setLightbox(null)}>
-            <button aria-label="Close preview"><X /></button>
-            <div className="lightbox-art-placeholder">
-              {lightbox.type === "video" ? <Play size={54} /> : <Camera size={54} />}
-            </div>
-            <p>{lightbox.title}</p>
-          </Motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

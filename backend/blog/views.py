@@ -14,12 +14,11 @@ from urllib.error import URLError, HTTPError
 import json
 from backend.security import clean_mapping, clean_text
 from .models import (
-    Content, BlogPost, Video, Document, ImageGallery, 
-    GalleryImage, Course, CourseModule, Comment
+    Content, BlogPost, Video, Document, Course, CourseModule, Comment
 )
 from .serializers import (
     ContentSerializer, BlogPostSerializer, VideoSerializer, DocumentSerializer,
-    ImageGallerySerializer, GalleryImageSerializer, CourseSerializer, CourseModuleSerializer,
+    CourseSerializer, CourseModuleSerializer,
     CommentSerializer, BlogPostCreateSerializer, VideoCreateSerializer, DocumentCreateSerializer,
     CourseCreateSerializer
 )

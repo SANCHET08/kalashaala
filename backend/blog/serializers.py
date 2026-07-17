@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import (
-    Content, BlogPost, Video, Document, ImageGallery, 
-    GalleryImage, Course, CourseModule, Comment
+    Content, BlogPost, Video, Document, Course, CourseModule, Comment
 )
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -25,11 +24,6 @@ class CommentSerializer(serializers.ModelSerializer):
             return CommentSerializer(obj.replies.all(), many=True).data
         return []
 
-class GalleryImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = GalleryImage
-        fields = ['id', 'image', 'caption', 'order']
-
 class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
@@ -44,13 +38,6 @@ class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Document
         fields = ['id', 'document_file', 'page_count', 'file_size']
-
-class ImageGallerySerializer(serializers.ModelSerializer):
-    images = GalleryImageSerializer(many=True, read_only=True)
-    
-    class Meta:
-        model = ImageGallery
-        fields = ['id', 'images']
 
 class CourseModuleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -281,7 +268,6 @@ class ContentSerializer(serializers.ModelSerializer):
     blog_details = serializers.SerializerMethodField()
     video_details = serializers.SerializerMethodField()
     document_details = serializers.SerializerMethodField()
-    gallery_details = serializers.SerializerMethodField()
     course_details = serializers.SerializerMethodField()
     
     comments = serializers.SerializerMethodField()
@@ -293,7 +279,7 @@ class ContentSerializer(serializers.ModelSerializer):
             'category', 'content_type', 'contributor', 'slug', 'tags', 
             'is_featured', 'view_count', 'download_count',
             'blog_details', 'video_details', 'document_details', 
-            'gallery_details', 'course_details', 'comments'
+            'course_details', 'comments'
         ]
         read_only_fields = ['upload_date', 'last_updated', 'slug', 'view_count', 'download_count']
 
@@ -317,14 +303,6 @@ class ContentSerializer(serializers.ModelSerializer):
         try:
             if hasattr(obj, 'document_details') and obj.document_details.first():
                 return DocumentSerializer(obj.document_details.first()).data
-        except:
-            pass
-        return None
-        
-    def get_gallery_details(self, obj):
-        try:
-            if hasattr(obj, 'gallery_details') and obj.gallery_details.first():
-                return ImageGallerySerializer(obj.gallery_details.first()).data
         except:
             pass
         return None
